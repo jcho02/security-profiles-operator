@@ -251,6 +251,10 @@ metadata:
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
   name: security-profiles-operator.v0.8.4-dev
   namespace: placeholder
+  labels:
+    operatorframework.io/arch.amd64: supported
+    operatorframework.io/arch.ppc64le: supported
+    operatorframework.io/os.linux: supported
 spec:
   apiservicedefinitions: {}
   customresourcedefinitions:

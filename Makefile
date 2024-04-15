@@ -193,6 +193,12 @@ image-arm64: ## Build the container image for arm64
 		--build-arg target=nix/default-arm64.nix \
 		-t $(IMAGE) .
 
+.PHONY: image-ppc64le
+	$(CONTAINER_RUNTIME) build -f Dockerfile.ubi \
+                --build-arg version=$(VERSION) \
+		--build-arg platform=ppc64le \
+                -t $(IMAGE) .
+
 .PHONY: image-cross
 image-cross: ## Build and push the container image manifest
 	hack/image-cross.sh
